@@ -22,7 +22,7 @@ Just include and execute the following in the first cell of your notebook
 
     $.getScript(url)
 
-The snippet has two options:
+The snippet has three options:
 
 * `load_remote_theme` : when true, will load a local theme if the ipython notebook
 is served on localhost. By default, the local theme files should be placed in
@@ -53,7 +53,7 @@ $('.cell:first').hide()
 // Load the styles
 
 if (load_local_theme()){
-    theme_url = document.location.origin + '/theme/'
+    theme_url = document.location.origin + '/files/theme/'
 }
 
 $('<link>')
@@ -70,7 +70,7 @@ $('<img>')
 // Load the assets
 
 if (load_local_theme()){
-    asset_url = document.location.origin + '/assets/'
+    asset_url = document.location.origin + '/files/assets/'
 }
 
 $('img[src^="assets/"]').each(
