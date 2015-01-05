@@ -38,10 +38,10 @@ Reference the provided `custom.js` for an example.
 
 // Theme and Asset base URLs, change these to your fork.
 
-if (typeof theme_url !== 'undefined'){
+if (typeof theme_url === 'undefined'){
     var theme_url   = 'http://drostehk.github.io/ipynb-theme/'
 }
-if (typeof asset_url !== 'undefined'){
+if (typeof asset_url === 'undefined'){
     var asset_url   = 'https://drostehk.github.io/notebook-assets/'
 }
 
