@@ -10,33 +10,41 @@ Just include and execute the following in the first cell of your notebook
     %%javascript
 
     window.load_remote_theme = true
-    var theme_js = "https://drostehk.github.io/ipynb-theme/custom.js";
+    var theme_url = "https://drostehk.github.io/ipynb-theme/custom.js";
+    var asset_url = 'https://drostehk.github.io/notebook-assets/';
 
     window.load_local_theme = function(){
         var hostname = document.location.hostname
         return ((hostname == "localhost" || hostname == '127.0.0.1') && !load_remote_theme)
     }
 
-    var url = load_local_theme() ? document.location.origin + "/files/theme/custom.js" : theme_js
+    var url = load_local_theme() ? document.location.origin + "/files/theme/custom.js" : theme_url + 'custom.js'
 
     $.getScript(url)
 
 The snippet has two options:
 
-* `local_theme` : when true, will load a local theme if the ipython notebook
+* `load_remote_theme` : when true, will load a local theme if the ipython notebook
 is served on localhost. By default, the local theme files should be placed in
 a sub-directory alongside the .ipynb file called 'theme'.
 
-* `theme_url` : the url for the javascript file to load. The javascript file
-should contain logic for injecting styles and functionality. Reference the
-provided `custom.js` for an example.
+* `theme_url` : the url for the theme. The url destination should at least contain
+a file called 'custom.js' which contains logic for injecting styles and functionality.
+Reference the provided `custom.js` for an example.
+
+* 'asset_url' : the url which will act as the root for all the inserted images.
 
 */
 
 // Theme and Asset base URLs, change these to your fork.
 
-var theme_url   = 'http://drostehk.github.io/ipynb-theme/'
-var asset_url   = 'https://drostehk.github.io/notebook-assets/'
+if (typeof theme_url !== 'undefined'){
+    var theme_url   = 'http://drostehk.github.io/ipynb-theme/'
+}
+if (typeof asset_url !== 'undefined'){
+    var asset_url   = 'https://drostehk.github.io/notebook-assets/'
+}
+
 
 // Hide the theme Cell
 
