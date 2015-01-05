@@ -45,6 +45,7 @@ if (typeof asset_url !== 'undefined'){
     var asset_url   = 'https://drostehk.github.io/notebook-assets/'
 }
 
+console.log(asset_url)
 
 // Hide the theme Cell
 
