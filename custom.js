@@ -9,9 +9,9 @@ Just include and execute the following in the first cell of your notebook
 
     %%javascript
 
-    window.load_remote_theme = true
-    var window.theme_url = "https://drostehk.github.io/ipynb-theme/custom.js";
-    var window.asset_url = 'https://drostehk.github.io/notebook-assets/';
+    window.load_remote_theme = true;
+    window.theme_url = "https://drostehk.github.io/ipynb-theme/";
+    window.asset_url = "https://drostehk.github.io/notebook-assets/";
 
     window.load_local_theme = function(){
         var hostname = document.location.hostname
