@@ -63,6 +63,9 @@ li {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+img {
+  max-width: 100%;
+}
 img[alt="break"] {
   width: 8rem;
   margin: 0 auto;
