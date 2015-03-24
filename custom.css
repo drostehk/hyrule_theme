@@ -147,6 +147,7 @@ p.resource-container a:hover div {
 }
 .CodeMirror {
   font-family: 'PT Mono', monospace;
+  font-size: 18px;
 }
 /* Based on Sublime Text's Monokai theme */
 .CodeMirror-lines {
